@@ -8,10 +8,12 @@
 
 // There are multiple ways to create arrays in JavaScript. Some of them are - 
 
+
 // 1. JavaScript Array Literal - 
 
 let arrayName1 = [value1, value2, value3, value4]
 // The values are contained inside [] and saperated by ,(Commas).
+
 
 // 2. JavaScript new Array Keyword -
 
@@ -22,6 +24,7 @@ arrayName2[1] = value2;
 arrayName2[2] = value3;
 arrayName2[3] = value4;
 // Here we declare an initialize an empty array, and fill the array with accessing the array by indexing.
+
 
 // 3. JavaScript Array Constructur - 
 
