@@ -4,6 +4,7 @@
 // JavaScript arrays are zero-indexed and it maintains the insertion order.
 // Arrays are iterable, They can be used with a for of loop.
 // JavaScript arrays inherit from Array.prototype and have specific array-like behaviors and methods.
+// JavaScript arrays are mutable. Which means elements in an array can be changed by assigning a new value to an index.
 
 // There are multiple ways to create arrays in JavaScript. Some of them are - 
 
