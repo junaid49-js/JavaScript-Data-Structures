@@ -46,4 +46,34 @@ class LinkedList {
     }
     this.size++;
   }
+
+  // Define method for appending an element to the list
+  append(value){
+    let node = new Node(value);
+    if( this.size === 0){
+      this.head = node;
+    } else {
+      let prev = this.head;
+      while(prev.next){
+        prev = prev.next;
+      }
+      prev.next = node;
+    }
+    this.size++;
+  }
+
+  // Define a method to print the list
+  print(){
+    if(this.isEmpty()) {
+      console.log('List is Empty')
+    } else {
+      let curr = this.head;
+      let listItems = '';
+      while(curr){
+        listItems = listItems + `${curr.value} `
+        curr = curr.next;
+      }
+      console.log(listItems);
+    }
+  }
 }
