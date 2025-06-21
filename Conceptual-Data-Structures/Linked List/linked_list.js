@@ -25,17 +25,17 @@ class LinkedList {
     this.size = 0;
   }
   
-  // define a method to check is the list is empty
+  // Define a method to check is the list is empty
   isEmpty(){
     return this.size === 0;
   }
 
-  // define a method to get size of the list
+  // Define a method to get size of the list
   getSize(){
     return this.size;
   }
 
-  // define method for prepending an element to the list
+  // Define method for prepending an element to the list
   prepend(value){
     let node = new Node(value);
     if( this.size === 0){
@@ -60,6 +60,25 @@ class LinkedList {
       prev.next = node;
     }
     this.size++;
+  }
+
+  // Define method to insert an element to given index
+  insert(value, index){
+    if(index < 0 || index > this.size){
+      return
+    }
+    if(index === 0){
+      this.prepend(value);
+    } else {
+      const node = new Node(value);
+      let prev = this.head;
+      for(let i = 0; i < index - 1; i++ ){
+        prev = prev.next;
+      }
+      node.next = prev.next;
+      prev.next = node;
+      this.size++;
+    }
   }
 
   // Define a method to print the list
