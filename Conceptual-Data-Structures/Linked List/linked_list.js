@@ -34,4 +34,16 @@ class LinkedList {
   getSize(){
     return this.size;
   }
+
+  // define method for prepending an element to the list
+  prepend(value){
+    let node = new Node(value);
+    if( this.size === 0){
+      this.head = node;
+    } else {
+      node.next = this.head;
+      this.head = node;
+    }
+    this.size++;
+  }
 }
