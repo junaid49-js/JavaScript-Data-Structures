@@ -81,6 +81,52 @@ class LinkedList {
     }
   }
 
+  // Define a method to remove an element from a given index
+  removeFrom(index){
+    if(index < 0 || index >= this.size){
+      return null;
+    }
+    let removedNode;
+    if(index === 0){
+      removedNode = this.head;
+      this.head = this.head.next;
+    } else {
+      let prev = this.head;
+      for (let i = 0; i < index - 1; i++){
+        prev = prev.next;
+      }
+      removedNode = prev.next;
+      prev.next = removedNode.next;
+    }
+    this.size--;
+    return removedNode.value;
+  }
+
+  // Define a method to remove an element by value
+  // If the element is present multiple times, it removes only the first 
+  remove(value){
+    if(this.isEmpty()){
+      return null;
+    }
+    if(this.head.value === value){
+      this.head = this.head.next;
+      this.size--;
+      return value;
+    } else {
+      let prev = this.head;
+      while(prev.next && prev.next.value !== value){
+        prev = prev.next;
+      }
+      if(prev.next){
+        let removedNode = prev.next;
+        prev.next = removedNode.next;
+        this.size--;
+        return value
+      }
+      return null;
+    }
+  }
+
   // Define a method to print the list
   print(){
     if(this.isEmpty()) {
