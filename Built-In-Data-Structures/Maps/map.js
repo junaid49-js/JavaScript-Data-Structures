@@ -16,6 +16,18 @@ fruits.set("apples", 300);
 // Get Map Values
 fruits.get("apples");    // Returns 300
 
+// Get Size of Map
+fruits.size;
+
+// Delete a Map element
+fruits.delete("apples");
+
+// Remove all the elements from the Map
+fruits.clear();
+
+// Returns true is the element is in the Map
+fruits.has("apples");
+
 // Returns object:
 typeof fruits;
 
