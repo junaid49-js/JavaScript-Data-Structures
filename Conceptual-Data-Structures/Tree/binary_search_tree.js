@@ -40,4 +40,18 @@ class binarySearchTree{
       }
     }
   }
+
+  search(root, value){
+    if(!root){
+      return -1
+    } else {
+      if(root.value === value){
+        return true
+      } else if(value < root.value){
+          return this.search(root.leftChild, value);
+        } else {
+            return this.search(root.rightChild, value);
+        }
+    }
+  }
 }
