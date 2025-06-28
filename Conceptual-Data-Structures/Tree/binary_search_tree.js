@@ -54,4 +54,21 @@ class binarySearchTree{
         }
     }
   }
+
+  // Depth First Search
+  preOrder(root){
+    if(root){
+      console.log(root.value);
+      this.preOrder(root.leftChild);
+      this.preOrder(root.rightChild);
+    }
+  }
+
+  inOrder(root){
+    if(root){
+      this.inOrder(root.leftChild);
+      console.log(root.value);
+      this.inOrder(root.rightChild);
+    }
+  }
 }
