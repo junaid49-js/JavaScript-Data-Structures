@@ -71,4 +71,12 @@ class binarySearchTree{
       this.inOrder(root.rightChild);
     }
   }
+  
+  postOrder(root){
+    if(root){
+      this.postOrder(root.leftChild);
+      this.postOrder(root.rightChild);
+      console.log(root.value);
+    }
+  }
 }
