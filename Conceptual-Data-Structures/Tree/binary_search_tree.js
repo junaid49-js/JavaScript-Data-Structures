@@ -56,6 +56,7 @@ class binarySearchTree{
   }
 
   // Depth First Search
+  //DFS Pre Order Traversal
   preOrder(root){
     if(root){
       console.log(root.value);
@@ -64,6 +65,7 @@ class binarySearchTree{
     }
   }
 
+  //DFS In Order Traversal
   inOrder(root){
     if(root){
       this.inOrder(root.leftChild);
@@ -71,7 +73,8 @@ class binarySearchTree{
       this.inOrder(root.rightChild);
     }
   }
-  
+
+  //DFS Post Order Traversal
   postOrder(root){
     if(root){
       this.postOrder(root.leftChild);
